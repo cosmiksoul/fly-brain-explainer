@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Оцифрованный мозг мухи</title>
-<meta name="description" content="Интерактивный эксплейнер: что на самом деле произошло, когда «мозг мухи научили играть в Doom» — коннектом MaleCNS, LIF-симуляции, эмбодимент Eon Systems, хобби-демки и честные контроли.">
+<title>Муха в машине. Как человечество научило муху играть в Doom</title>
+<meta name="description" content="Интерактивный эксплейнер про муху, которая «играет» в Doom: коннектом MaleCNS, LIF-симуляции, эмбодимент Eon Systems, хобби-демки и честные контроли.">
 <!-- превью для шаринга (LinkedIn, Telegram, X, Slack) — og.png лежит рядом с index.html -->
 <link rel="canonical" href="https://cosmiksoul.github.io/fly-brain-explainer/">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:site_name" content="cosmiksoul">
-<meta property="og:title" content="Оцифрованный мозг мухи: что произошло на самом деле">
+<meta property="og:title" content="Муха в машине. Как человечество научило муху играть в Doom">
 <meta property="og:description" content="Интерактивный эксплейнер: коннектом MaleCNS, LIF-симуляции, хобби-демки Doom / Minecraft / CARLA и песочница, где игрушечный мозг мухи играет в слот и Hi-Lo против вас.">
 <meta property="og:url" content="https://cosmiksoul.github.io/fly-brain-explainer/">
 <meta property="og:image" content="https://cosmiksoul.github.io/fly-brain-explainer/og.png">
@@ -18,11 +18,15 @@
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Оцифрованный мозг мухи — интерактивный эксплейнер; стилизованная дрозофила на фоне сети нейронов">
+<meta property="og:image:alt" content="Муха в машине. Как человечество научило муху играть в Doom: превью эксплейнера, стилизованная дрозофила на фоне сети нейронов">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Оцифрованный мозг мухи: что произошло на самом деле">
+<meta name="twitter:title" content="Муха в машине. Как человечество научило муху играть в Doom">
 <meta name="twitter:description" content="Коннектом MaleCNS, LIF-симуляции, демки Doom / Minecraft / CARLA и песочница с игрушечным мозгом мухи.">
 <meta name="twitter:image" content="https://cosmiksoul.github.io/fly-brain-explainer/og.png">
+<!-- иконки вшиты в страницу: SVG для вкладок, PNG 32×32 для браузеров без SVG-иконок (старые Safari), 180×180 для экрана «Домой» на iOS -->
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230C1018'/%3E%3Cg transform='matrix(1.08 0 0 1.08 -2.56 -4.18)'%3E%3Cdefs%3E%3CradialGradient id='b' cx='.45' cy='.35' r='.75'%3E%3Cstop offset='0' stop-color='%23F2C47A'/%3E%3Cstop offset='1' stop-color='%23B06C1E'/%3E%3C/radialGradient%3E%3CradialGradient id='e' cx='.4' cy='.3' r='.8'%3E%3Cstop offset='0' stop-color='%23F4707F'/%3E%3Cstop offset='1' stop-color='%23A01F35'/%3E%3C/radialGradient%3E%3CclipPath id='a'%3E%3Cpath d='M32 33C41.5 34 42.5 46 32 59C21.5 46 22.5 34 32 33Z'/%3E%3C/clipPath%3E%3C/defs%3E%3Cg fill='%23E7EAF0' fill-opacity='.16' stroke='%23E7EAF0' stroke-opacity='.6' stroke-width='1.3' stroke-linejoin='round'%3E%3Cpath d='M28.5 28C20 30 11.5 41 14 55C21.5 55.5 28 45 30.5 34Z'/%3E%3Cpath d='M35.5 28C44 30 52.5 41 50 55C42.5 55.5 36 45 33.5 34Z'/%3E%3C/g%3E%3Cg fill='none' stroke='%23A8691F' stroke-width='2.1' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M27 24L20 18.5L15.5 20M37 24L44 18.5L48.5 20M25.5 29L17.5 30L13 35.5M38.5 29L46.5 30L51 35.5M26.5 34L20.5 41.5L18.5 47.5M37.5 34L43.5 41.5L45.5 47.5'/%3E%3C/g%3E%3Cpath d='M32 33C41.5 34 42.5 46 32 59C21.5 46 22.5 34 32 33Z' fill='url(%23b)' stroke='%236A3F0F' stroke-width='.9'/%3E%3Cg clip-path='url(%23a)' fill='%234A2A08' opacity='.85'%3E%3Crect x='20' y='38.5' width='24' height='2.8'/%3E%3Crect x='20' y='44' width='24' height='2.8'/%3E%3Crect x='20' y='49.5' width='24' height='2.8'/%3E%3C/g%3E%3Cellipse cx='32' cy='28.5' rx='7.6' ry='8.2' fill='url(%23b)' stroke='%236A3F0F' stroke-width='.9'/%3E%3Ccircle cx='32' cy='16.5' r='8.4' fill='url(%23b)' stroke='%236A3F0F' stroke-width='.9'/%3E%3Cellipse cx='26.6' cy='16.6' rx='4.3' ry='5.6' fill='url(%23e)' stroke='%235A0F1A' stroke-width='.6'/%3E%3Cellipse cx='37.4' cy='16.6' rx='4.3' ry='5.6' fill='url(%23e)' stroke='%235A0F1A' stroke-width='.6'/%3E%3Cellipse cx='25.4' cy='14.4' rx='1.3' ry='1.7' fill='%23fff' opacity='.4'/%3E%3Cellipse cx='36.2' cy='14.4' rx='1.3' ry='1.7' fill='%23fff' opacity='.4'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Onest:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -79,7 +83,35 @@ code{background:var(--surface2);border:1px solid var(--line);border-radius:5px;p
 .navlinks a:hover,.navlinks a.active{color:var(--text);background:var(--surface2)}
 .themebtn{border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:6px;font-family:var(--mono);font-size:12px;padding:6px 10px;cursor:pointer;white-space:nowrap}
 .themebtn:hover{border-color:var(--line2)}
+.sitemenu{flex:1;min-width:0;display:flex;align-items:center;gap:14px}
+.sitemenu .themebtn,.menubtn,.navscrim{display:none}
 .progress{position:absolute;left:0;bottom:-1px;height:2px;width:0;background:var(--accent);transition:width .1s linear}
+/* все 8 разделов помещаются в строку примерно от 1080px, на экранах поуже они уходят в выпадающую панель */
+@media (max-width:1099.98px){
+  .menubtn{display:inline-flex;align-items:center;gap:8px;margin-left:auto;min-height:40px;padding:0 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);font-family:var(--mono);font-size:12px;letter-spacing:.02em;white-space:nowrap;cursor:pointer}
+  .menubtn:hover,.topbar.is-open .menubtn{border-color:var(--line2)}
+  .topbar.is-open .menubtn{background:var(--surface2)}
+  .menubtn .ico{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+  .menubtn .i-close,.topbar.is-open .menubtn .i-open{display:none}
+  .topbar.is-open .menubtn .i-close{display:inline}
+  .topbar .inner > .themebtn{min-height:40px}
+  .sitemenu{position:absolute;top:calc(100% + 8px);right:max(var(--gutter),env(safe-area-inset-right,0px));width:min(340px,calc(100% - 2*var(--gutter)));max-height:calc(100vh - 76px);max-height:calc(100dvh - 76px);overflow-y:auto;overscroll-behavior:contain;display:block;padding:6px;background:var(--surface);border:1px solid var(--line2);border-radius:var(--radius);box-shadow:var(--shadow);visibility:hidden;opacity:0;transform:translateY(-6px);transition:opacity .16s ease,transform .16s ease,visibility 0s linear .16s}
+  .topbar.is-open .sitemenu{visibility:visible;opacity:1;transform:none;transition:opacity .16s ease,transform .16s ease}
+  .navlinks{flex-direction:column;gap:2px;overflow:visible;counter-reset:nav}
+  .navlinks a{display:flex;align-items:center;gap:12px;min-height:44px;padding:10px 12px;font-size:14px;color:var(--text2);white-space:normal}
+  .navlinks a::before{counter-increment:nav;content:counter(nav,decimal-leading-zero);content:counter(nav,decimal-leading-zero) / "";font-size:11px;color:var(--muted)}
+  .navlinks a.active{box-shadow:inset 2px 0 0 var(--accent)}
+  .navlinks a.active::before{color:var(--accent)}
+  .navscrim{display:block;position:fixed;inset:0;z-index:49;background:rgba(5,8,12,.55);opacity:0;visibility:hidden;transition:opacity .16s ease,visibility 0s linear .16s}
+  :root[data-theme="light"] .navscrim{background:rgba(20,25,34,.25)}
+  .topbar.is-open + .navscrim{opacity:1;visibility:visible;transition:opacity .16s ease}
+}
+/* на телефоне переключатель темы не помещается в шапку и живёт внизу панели */
+@media (max-width:479.98px){
+  .topbar .inner > .themebtn{display:none}
+  .sitemenu .themebtn{display:block;width:100%;min-height:44px;margin-top:6px;padding:10px 12px;border:0;border-top:1px solid var(--line);border-radius:0 0 6px 6px;background:transparent;font-size:14px;text-align:left}
+}
+@media (prefers-reduced-motion:reduce){.sitemenu,.navscrim{transition:none!important}}
 
 /* layout */
 .wrap{max-width:var(--wide);margin:0 auto;padding-inline:var(--gutter)}
@@ -98,6 +130,7 @@ section.part:first-of-type{border-top:0}
 .hero .inner{position:relative;max-width:var(--wide);margin:0 auto;padding:clamp(48px,8vw,110px) var(--gutter) clamp(40px,6vw,80px);display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:40px;align-items:end}
 @media (max-width:860px){.hero .inner{grid-template-columns:1fr}}
 .hero h1{max-width:14ch}
+.hero h1 .h1-sub{display:block;margin-top:.45em;font-size:clamp(18px,.5em,30px);font-weight:500;line-height:1.2;color:var(--text2)}
 .hero .lede{font-size:clamp(17px,1.6vw,20px);color:var(--text2);max-width:52ch;margin-top:20px}
 .hero .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:22px;font-family:var(--mono);font-size:12.5px;color:var(--muted)}
 .hero .meta b{color:var(--text);font-weight:500}
@@ -498,20 +531,25 @@ footer{border-top:1px solid var(--line);padding:28px var(--gutter) 48px;font-siz
 <header class="topbar">
   <div class="inner">
     <a class="brand" href="#top">МУХА <span>/</span> В МАШИНЕ</a>
-    <nav class="navlinks" aria-label="Разделы">
-      <a href="#preamble">Преамбула</a>
-      <a href="#essence">Суть</a>
-      <a href="#connectome">Коннектом</a>
-      <a href="#simulation">Симуляция</a>
-      <a href="#sandbox">Песочница</a>
-      <a href="#ideas">Идеи для проекта</a>
-      <a href="#demos">Демки</a>
-      <a href="#sources">Источники</a>
-    </nav>
+    <button class="menubtn" id="menuBtn" type="button" aria-expanded="false" aria-controls="siteMenu"><svg class="ico" viewBox="0 0 16 16" aria-hidden="true"><path class="i-open" d="M2 4h12M2 8h12M2 12h12"/><path class="i-close" d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg>Разделы</button>
+    <div class="sitemenu" id="siteMenu">
+      <nav class="navlinks" aria-label="Разделы">
+        <a href="#preamble">Преамбула</a>
+        <a href="#essence">Суть</a>
+        <a href="#connectome">Коннектом</a>
+        <a href="#simulation">Симуляция</a>
+        <a href="#sandbox">Песочница</a>
+        <a href="#ideas">Идеи для проекта</a>
+        <a href="#demos">Демки</a>
+        <a href="#sources">Источники</a>
+      </nav>
+      <button class="themebtn" type="button" aria-label="Переключить тему">тема: авто</button>
+    </div>
     <button class="themebtn" id="themeBtn" type="button" aria-label="Переключить тему">тема: авто</button>
   </div>
   <div class="progress" id="progress"></div>
 </header>
+<div class="navscrim" aria-hidden="true"></div>
 
 <main id="top">
 <section class="hero" aria-labelledby="h1">
@@ -519,7 +557,7 @@ footer{border-top:1px solid var(--line);padding:28px var(--gutter) 48px;font-siz
   <div class="inner">
     <div>
       <div class="eyebrow">Интерактивный эксплейнер · сентябрь 2026</div>
-      <h1 id="h1" style="margin-top:14px">Оцифрованный мозг мухи: что произошло на самом деле</h1>
+      <h1 id="h1" style="margin-top:14px">Муха в&nbsp;машине. <span class="h1-sub">Как человечество научило муху играть в&nbsp;Doom</span></h1>
       <p class="lede">3 сентября 2026 Google Research и HHMI Janelia выложили полную карту проводки нервной системы самца дрозофилы. Через три дня «мозг мухи» играл в Doom, через неделю — в Beat Saber, торговал биткоином и парковался. Разбираем, где здесь биология, где инженерия, а где мем.</p>
       <div class="meta">
         <span>датасет <b>MaleCNS v1.0</b></span>
@@ -1773,17 +1811,18 @@ const fmtInt=v=>Math.round(v).toString().replace(/\B(?=(\d{3})+(?!\d))/g,' ');
 const fmtBig=v=>v>=1e12?(+(v/1e12).toPrecision(3)).toString().replace('.',',')+' трлн':v>=1e9?(+(v/1e9).toPrecision(3)).toString().replace('.',',')+' млрд':v>=1e6?(+(v/1e6).toPrecision(3)).toString().replace('.',',')+' млн':fmtInt(v);
 
 /* ---------- theme ---------- */
-const themeBtn=$('#themeBtn');
+const themeBtns=$$('.themebtn');   // в шапке и в меню разделов на телефоне
 let themeMode='auto';
 try{themeMode=localStorage.getItem('fly-theme')||'auto'}catch(e){}
 const mqLight=matchMedia('(prefers-color-scheme: light)');
 function applyTheme(){
   const eff=themeMode==='auto'?(mqLight.matches?'light':'dark'):themeMode;
   root.setAttribute('data-theme',eff);
-  themeBtn.textContent='тема: '+(themeMode==='auto'?'авто':themeMode==='dark'?'тёмная':'светлая');
+  const label='тема: '+(themeMode==='auto'?'авто':themeMode==='dark'?'тёмная':'светлая');
+  themeBtns.forEach(b=>b.textContent=label);
   document.dispatchEvent(new CustomEvent('themechange'));
 }
-themeBtn.addEventListener('click',()=>{themeMode=themeMode==='auto'?'dark':themeMode==='dark'?'light':'auto';try{localStorage.setItem('fly-theme',themeMode)}catch(e){}applyTheme()});
+themeBtns.forEach(b=>b.addEventListener('click',()=>{themeMode=themeMode==='auto'?'dark':themeMode==='dark'?'light':'auto';try{localStorage.setItem('fly-theme',themeMode)}catch(e){}applyTheme()}));
 mqLight.addEventListener('change',()=>{if(themeMode==='auto')applyTheme()});
 applyTheme();
 
@@ -1817,9 +1856,23 @@ function onScroll(){
   const h=document.documentElement; const p=h.scrollTop/(h.scrollHeight-h.clientHeight);
   prog.style.width=(Math.max(0,Math.min(1,p))*100)+'%';
   let cur=null; for(const s of sections){if(s.getBoundingClientRect().top<=120)cur=s}
-  navLinks.forEach(a=>a.classList.toggle('active',cur&&a.getAttribute('href')==='#'+cur.id));
+  navLinks.forEach(a=>{const on=!!cur&&a.getAttribute('href')==='#'+cur.id;a.classList.toggle('active',on);if(on)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current')});
 }
 addEventListener('scroll',onScroll,{passive:true}); onScroll();
+
+/* ---------- меню разделов на узких экранах ---------- */
+(function(){
+  const bar=$('.topbar'),btn=$('#menuBtn'),menu=$('#siteMenu'),scrim=$('.navscrim');if(!bar||!btn||!menu)return;
+  const isOpen=()=>bar.classList.contains('is-open');
+  function setMenu(open){bar.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',String(open))}
+  btn.addEventListener('click',()=>setMenu(!isOpen()));
+  menu.addEventListener('click',e=>{if(e.target.closest('a'))setMenu(false)});
+  if(scrim)scrim.addEventListener('click',()=>setMenu(false));   // на iOS клик по блоку без своего обработчика не доходит до document
+  document.addEventListener('click',e=>{if(isOpen()&&!menu.contains(e.target)&&!btn.contains(e.target))setMenu(false)});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&isOpen()){setMenu(false);btn.focus()}});
+  bar.addEventListener('focusout',e=>{const t=e.relatedTarget;if(isOpen()&&t&&t!==btn&&!menu.contains(t))setMenu(false)});
+  addEventListener('resize',()=>{if(isOpen()&&getComputedStyle(btn).display==='none')setMenu(false)});
+})();
 
 /* ---------- tooltip ---------- */
 const tip=$('#tip');
