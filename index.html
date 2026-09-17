@@ -523,6 +523,8 @@ pre.code .f{color:var(--accent)}
 .sources li{scroll-margin-top:80px;transition:background .3s}
 .sources li:target{background:var(--accent-soft);border-radius:6px;padding:6px 8px;margin-left:-8px}
 footer{border-top:1px solid var(--line);padding:28px var(--gutter) 48px;font-size:13.5px;color:var(--muted);text-align:center}
+footer p{max-width:100ch;margin:0 auto;text-wrap:balance}
+footer p + p{margin-top:6px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 </style>
 </head>
@@ -1467,7 +1469,8 @@ for t in range(T):
 </section>
 </main>
 <footer>
-  Собрано как самодостаточный HTML без внешних библиотек: все интерактивы — на ванильном JavaScript, SVG и Canvas. Шрифты подгружаются с Google Fonts; без сети страница откроется с системными. Термины с точечным подчёркиванием раскрываются по наведению или тапу; ссылки на статьи ведут в раздел «Источники».
+  <p>©&nbsp;2026 <a href="https://github.com/cosmiksoul">cosmiksoul</a>. Код под лицензией <a href="https://github.com/cosmiksoul/fly-brain-explainer/blob/main/LICENSE">MIT</a>, тексты и собственные иллюстрации под <a href="https://creativecommons.org/licenses/by/4.0/deed.ru">CC&nbsp;BY&nbsp;4.0</a>.</p>
+  <p>Сторонние кадры, картинки, данные и цитаты принадлежат их авторам. Ссылки на первоисточники собраны в разделе <a href="#sources">«Источники»</a>.</p>
 </footer>
 <script>
 /* ===================== игрушечный мозг: общий движок для Doom-схемы, слота и Hi-Lo ===================== */
